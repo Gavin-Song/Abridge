@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+	<link rel="stylesheet" type="text/css" href="css/popup.css">
+	<body>
+		<div id="main_div">
+			<!--<h2 style='user-select: none;'>ABRIDGE</h2>-->
+			<img src="img/logo_title.png" class="logo_title"><button id="settings_button" class="setting_button">&#9776;</button>
+			<br>
+			<hr>
+
+			
+			<button id="summerize" class="summarize_button">SUMMARIZE</button>
+			<br><br><br><br><br><br><br><br><br><br><hr>
+			<p style='width: 90%;left:5%;position:relative'>
+				Click the "Summarize" button above to summarize your webpage<br><br>
+				Visit out website for more info: <a href='https://gavin-song.github.io/abridge/'>https://gavin-song.github.io/abridge/</a>
+			</p>
+			
+			
+			<p class="title">Share with your friends</p>
+			
+			<p style='text-align:center'>
+				<a href='https://www.facebook.com/share.php?u=https://gavin-song.github.io/abridge/'>
+					<img src="img/facebook.png" height=30px width=30px>
+				</a>
+				<a href='http://twitter.com/home?status=https://gavin-song.github.io/abridge/'>
+					<img src="img/twitter.png" height=30px width=30px>
+				</a>
+				
+				<a href='https://plus.google.com/share?url=https://gavin-song.github.io/abridge/'>
+					<img src="img/google+.png" height=30px width=30px>
+				</a>
+
+				<a href='https://github.com/Gavin-Song/abridge'>
+					<img src="img/github.png" height=30px width=30px>
+				</a>
+			</p>
+	
+		</div>
+		
+		<div id="settings_div">
+			<button id="back_button" class="back_button">&#x25c0; Back</button>
+			<br><br>
+			<p class="title">Basic Settings</p>
+			
+			<label class="control control-checkbox">
+					<input class="regular-checkbox" id="dont_create_tabs" type="checkbox" value="Don't Create Tabs">Don't Create Tabs<br>
+				<div class="control_indicator"></div>
+			</label>
+			
+			<p class="title">Highlighting</p>
+			<div style='margin:5px'>
+				Highlight type
+				<select id="highlight type">
+					<option value="highlight">Block highlight</option>
+					<option value="subtle_change">Subtle Colour Change</option>
+					<option value="underline" selected="selected">Underline Text</option>
+				</select>
+				<br>
+			</div>
+			
+			<div style='margin:5px'>
+				<div id="square1" class="square"></div> Key phrases 
+				<select id="highlight-color-1">
+					<option value="blue">Blue</option>
+					<option value="green">Green</option>
+					<option value="red">Red</option>
+					<option value="brown">Brown</option>
+					<option value="purple">Purple</option>
+					<option value="orange" selected="selected">Orange</option>
+					<option value="yellow">Yellow</option>
+					<option value="light_blue">Light blue</option>
+					<option value="pink">Pink</option>
+					<option value="gray">Gray</option>
+					<option value="none">None</option>
+				</select><br>
+			</div> 
+			
+			<div style='margin:5px'>
+				<div id="square2" class="square"></div> Key events  
+				<select id="highlight-color-2">
+					<option value="blue">Blue</option>
+					<option value="green">Green</option>
+					<option value="red">Red</option>
+					<option value="brown">Brown</option>
+					<option value="purple">Purple</option>
+					<option value="orange">Orange</option>
+					<option value="yellow" selected="selected">Yellow</option>
+					<option value="light_blue">Light blue</option>
+					<option value="pink">Pink</option>
+					<option value="gray">Gray</option>
+					<option value="none">None</option>
+				</select><br>
+			</div> 
+			
+			<div style='margin:5px'>
+				<div id="square3" class="square"></div> Statistics
+				<select id="highlight-color-3">
+					<option value="blue" selected="selected">Blue</option>
+					<option value="green">Green</option>
+					<option value="red">Red</option>
+					<option value="brown">Brown</option>
+					<option value="purple">Purple</option>
+					<option value="orange">Orange</option>
+					<option value="yellow">Yellow</option>
+					<option value="light_blue">Light blue</option>
+					<option value="pink">Pink</option>
+					<option value="gray">Gray</option>
+					<option value="none">None</option>
+				</select>
+			</div>
+			
+			<p class="title">Advanced Settings</p>
+			
+			<label class="control control-checkbox">
+					<input id="debug_mode" type="checkbox" value="Debug mode">Debug Mode<br>
+				<div class="control_indicator"></div>
+			</label>
+			
+			<label class="control control-checkbox">
+					<input id="search_all" type="checkbox" value="Search All">Search All Tags<br>
+				<div class="control_indicator"></div>
+			</label>
+			
+			<label class="control control-checkbox">
+					<input id="no_timeout" type="checkbox" value="No Timeout">No Timeout<br>
+				<div class="control_indicator"></div>
+			</label>
+			
+			<label class="control control-checkbox">
+					<input id="search_hidden" type="checkbox" value="Search Hidden">Search Hidden Elements<br>
+				<div class="control_indicator"></div>
+			</label>
+			<br>
+
+			<button id="reset_settings" class="main_button">Reset Settings</button>
+		</div>
+		
+
+		<script type="text/javascript" src="js/popup.js"></script>
+	</body>
+</html>

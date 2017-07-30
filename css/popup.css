@@ -1,0 +1,201 @@
+/*Load in the custom font*/
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+body{
+	font-family: "Roboto", sans-serif;
+	width: 250px;
+	height: 400px;
+	font-size: 13px;
+}
+
+a{
+	text-decoration: none;
+}
+
+h2{
+	display: inline;
+	font-size: 24px;
+	margin-left: 20px;
+}
+
+.logo_title{
+	height: 28px;
+	width: auto;
+	margin-left: 20px;
+}
+
+.setting_button{
+	position: absolute;
+	right: 10px;
+	top: -7px;
+	outline:none;
+	
+	background: transparent;
+    border: none !important;
+	font-size: 24px;
+}
+.back_button{
+	float: left;
+	outline:none;
+	
+	background: transparent;
+    border: none !important;
+	font-size: 24px;
+}
+
+hr{
+	border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.main_button{
+	background-color: #333;
+    border: none;
+    color: white;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+	transition: 1s;
+	outline: none;
+	position: absolute;
+	width: 240px;
+	margin-left: 10px;
+}
+
+
+
+.summarize_button{
+	background-color: #333;
+    border: none;
+    color: white;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+	transition: 1s;
+	outline: none;
+	position: absolute;
+	width: 100%;
+	margin-left: 0px;
+	height: 160px;
+}
+
+.main_button:hover, .summarize_button:hover{
+	background-color: #555;
+	transition: 1s;
+}
+
+.title{
+	background-color: #333;
+	color: white;
+	padding: 5px;
+	padding-left: 15px;
+}
+
+select{
+	width: 125px;
+	left: 125px;
+	position: absolute;
+	font-family: "Roboto", sans-serif;
+}
+
+button{
+	font-family: "Roboto", sans-serif;
+}
+
+.square{
+	margin: 0px;
+	display: inline;
+	width: 10px;
+	height: 10px;
+	margin: 5px;
+	border: 1px solid rgba(0, 0, 0, .2);
+}
+
+
+.control {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 3px;
+    padding-top: 3px;
+    cursor: pointer;
+}
+.control input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+.control_indicator {
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    height: 14px;
+    width: 14px;
+    background: #e6e6e6;
+    border: 0px solid #000000;
+}
+.control-radio .control_indicator {
+    border-radius: undefined%;
+}
+
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+    background: #cccccc;
+}
+
+.control input:checked ~ .control_indicator {
+    background: #2aa1c0;
+}
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+    background: #0e6647d;
+}
+.control input:disabled ~ .control_indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.control_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+.control input:checked ~ .control_indicator:after {
+    display: block;
+}
+.control-checkbox .control_indicator:after {
+    left: 5px;
+    top: 1px;
+    width: 3px;
+    height: 8px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.control-checkbox input:disabled ~ .control_indicator:after {
+    border-color: #7b7b7b;
+}
+
+
+#settings_div{
+	left: 270px;
+	top: 0px;
+	position: absolute;
+	width: 100%;
+	transition: 0.2s;
+}
+
+#main_div{
+	position: absolute; 
+	left: 0px;
+	width: 100%;
+	transition: 0.2s;
+}

@@ -1,0 +1,559 @@
+/*main.css - The CSS file injected into the webpage, mostly for 
+the tabs and misc that are created*/
+
+/*Load the custom font Arimo from google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+
+/*Load the custom font Roboto Thin 300 from google fonts*/ 
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+/*The class that encompasses the highlighted text in
+the article. Becomes brighter when you hover over it*/
+.extension_highlight{
+	border: 1px solid white;
+	transition: 0.5s;
+}
+.extension_highlight:hover{
+	filter: brightness(1.2);
+	border: 1px solid white;
+	transition: 0.5s;
+}
+
+/*Links within the highlighted text should be a lighter blue*/
+.extension_highlight a{
+	color: #0062A3;
+}
+
+
+
+/*===========================================================*/
+
+/*The tabs on the bottom. This class refers to the actual tabs themselves 
+and not the content. summary_bottom_tab is CSS applied to all 6 tabs, although
+summary_bottom_tab1 through 6 are for individual tabs themselves */
+.summary_bottom_tab{
+	all: initial;
+	font-family: "Roboto", sans-serif !important;
+	font-size: 17px !important;
+	text-align: center !important;
+	/*text-transform: uppercase !important;*/
+	cursor: pointer !important;
+	user-select: none !important;
+	 
+	min-height: 70px;
+	height: 9%;
+	
+	border: none !important;
+	padding: 10px !important;
+	border-top: 8px solid #666 !important;
+	box-sizing: border-box !important; 
+	
+	color: white !important;
+	background: #333;
+	
+	position: fixed !important;
+	bottom: 0px;
+	transition: height 0.2s !important;
+	/*box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.72);*//*Enable for shadow, although extension is mostly flat design*/
+	z-index: 2147483647 !important;
+	font-weight: lighter !important;
+}
+
+.summary_bottom_tab:hover{
+	min-height: 80px;
+	height: 11%;
+	border-top: 10px solid #888888 !important;
+	transition: height 0.2s !important;
+	color: white !important;
+	background: #49565E !important;
+}
+
+.summary_bottom_tab:focus{
+	color: white !important;
+	background: #49565E !important;
+}
+
+/*Customization for individual tabs*/
+.summary_bottom_tab1{
+	left: 0px;
+	width: 22.5%;
+}
+.summary_bottom_tab2{
+	left: 22.5%;
+	width: 22.5%;
+}
+.summary_bottom_tab3{
+	left: 45%;
+	width: 22.5%;
+}
+.summary_bottom_tab4{
+	left: 67.5%;
+	width: 22.5%;
+}
+.summary_bottom_tab5{
+	left: 90%;
+	font-size: 24px !important;
+	width: 5%;
+}
+.summary_bottom_tab6{
+	left: 95%;
+	font-size: 24px !important;
+	width: 5%;
+}
+
+
+
+/*===========================================================*/
+/*The class that actually contains the information that each tab repersents*/
+.summary_tab{
+	all: initial;
+	font-family: "Roboto", sans-serif !important;
+	font-weight: lighter !important;
+	/*box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.72);*//*Enable for box shadow, although style is flat*/
+	background-color: white;
+	font-size: 15.7px;
+	padding: 0px; /*Padding of inside elements is in another class*/
+	
+	bottom: -75%;
+	position: fixed;
+	height: 75%;
+	width: 100%;
+	left: 0px;
+	line-height: 150%;
+	
+	overflow-y: scroll;
+	transition: 0s;
+	z-index: 2147483646;
+	opacity: 1;
+	text-align: left;
+	text-transform: none;
+	transition: opacity 0.2s;
+}
+
+.summary_tab p{
+	-webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+	text-transform: none;
+	font-size: 15.7px;
+}
+
+.summary_tab a{
+	all: initial;
+	font-family: "Roboto", sans-serif !important;
+	font-weight: lighter !important;
+	font-size: 15.7px;
+	text-decoration: none !important;
+	color: #0040FF;
+	text-transform: none;
+}
+
+
+/*===========================================================*/
+
+
+
+/*The class that wraps the information inside the tab itself
+Width of 50% with margin of 25% of each side*/
+.summary_tab_inside{
+	margin: 40px;
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+
+/*===========================================================*/
+
+/*The timeline is a table with 2 columns: date and information
+This class is for the timeline table (Obviously)*/
+.summary_timeline_table th, .summary_timeline_table tr{
+	text-align: left;
+	font-family: "Roboto", sans-serif !important;
+	font-weight: lighter !important;
+	font-size: 15.7px; /*Yes 15.7, don't ask*/
+	line-height: 150%;
+	text-transform: none;
+	
+	border: none; 
+	color: black;
+	background-color: transparent;
+	
+	padding: 30px;
+	padding-top: 10px;
+	padding-bottom: 3px;
+}
+
+/*The class that displays the year text, which 
+is shown on the left side of the timeline*/
+.summary_timeline_year{
+	width:150px;
+	height: 85px;
+	
+	font-size: 24px;
+	text-align: center;
+	font-family: "Roboto", sans-serif !important;
+	font-weight: lighter !important;
+	text-transform: none;
+	
+	padding-top: 20%;
+	box-sizing: border-box;    
+	background-color: none;
+}
+
+/*The class that displays the timeline month,
+which is sometimes shown below the year*/
+.summary_timeline_month{
+	position: relative; 
+	font-size: 14px;
+	top: 0px;
+	color: gray; 
+	text-transform: none;
+}
+
+
+/*===========================================================*/
+/*The image wrapper class for images in tab 4*/
+.summary_image_square{
+    width: 200px;
+    height: 200px;
+	
+    overflow: hidden;
+    margin: 0px;
+    position: relative;
+	float: left;
+	border: none;
+}
+/*The image itself in tab 4*/
+.summary_image_square img{
+	all: unset;
+    position: absolute;
+    margin: auto; 
+    min-height: 100%;
+    min-width: 100%;
+
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+	
+	transition: filter 1s;
+}
+/*Brighten the image on hover*/
+.summary_image_square img:hover{
+	filter: brightness(115%);
+	transition: filter 1s;
+}
+
+
+/*===========================================================*/
+/*Keywords in tab one*/
+.summary_keyword{
+	padding: 4px;
+	margin: 2px;
+	padding-left: 8px;
+	padding-right: 8px;
+	
+	transition: 1s;
+	display: inline-block;
+	background-color: #ddd;
+	
+	font-family: "Roboto", sans-serif !important;
+	text-transform: none;
+	font-size: 14px;
+}
+
+.summary_keyword:hover{
+	background-color: #eee;
+	transition: 1s;
+}
+
+/*===========================================================*/
+/*"Code box" to hold statistics and data*/
+.summary_code{
+	all: unset;
+	display: block;
+	line-height: 150%;
+	background-color: #eee;
+	color: #555;
+	padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 15px;
+	text-transform: none;
+}
+
+/*===========================================================*/
+/*Buttons used in the tabs*/
+.summarize_button{
+	all: unset;
+	padding: 7px 12px 7px 12px;
+	background-color: #363F45;
+	color: white;
+	font-size: 14.5px;
+	transition: 1s;
+	border: none;
+	text-transform: none;
+	margin: 0px;
+}
+.summarize_button:hover{
+	background-color: #49545C;
+	transition: 1s;
+	cursor: pointer;
+}
+
+
+
+/*===========================================================*/
+/*Warning label for non-english languages*/
+.summary_language_warning{
+	padding: 10px;
+	color: white; 
+	font-size: 15.7px;
+	background-color: red;
+	text-transform: none;
+}
+
+/*The checkbox that only shows important events in timeline*/
+#timeline_importance{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/*The little label that says something like 
+0 MIN (1 WORDS)      SUMMARY LENGTH: 0 KEY POINTS*/
+#summary_length{
+	color: gray;
+	position: relative;
+	font-size: 14px;
+	margin-top: -5px;
+	margin-bottom: 15px;
+	text-transform: none;
+}
+
+/*The search bar in tab1*/
+.summary_search_bar{
+	all: unset;
+	box-sizing: content-box !important;
+	width: calc(100% - 22px);
+	padding: 8px 6px 8px 6px !important;
+	padding-left: 16px !important;
+	border-radius: 0px !important;
+	margin-bottom: 10px !important;
+	margin-top: 15px !important;
+	height: 24px !important;
+	box-shadow: none !important;
+	
+	border: 1px solid #ddd !important;
+	background-color: #eee;
+	color: gray;
+	text-transform: none;
+	
+	text-align: left;
+	font-family: "Roboto", sans-serif !important;
+	font-weight: lighter !important;
+	font-size: 16px !important; /*Yes 15.7, don't ask*/
+	line-height: 150%;
+	text-transform: none;
+}
+
+
+.summary_search_bar:focus {
+	border: solid 1px #AAA;
+	box-shadow: 0px 0px 3px 0px rgba(110,226,255,0.5) !important;
+}
+
+
+/*Restyling the slider on tab1*/
+.summary_range_slider {
+  all: unset;
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 5px;
+  transition: background 1s;
+}
+.summary_range_slider:focus {
+  outline: none;
+}
+.summary_range_slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 16px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  background: #AAA;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+.summary_range_slider::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  border: 0px solid #000000;
+  height: 16px;
+  width: 16px;
+  border-radius: 0px;
+  background: #646464;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: 0px;
+  z-index: 20000;
+}
+.summary_range_slider:focus::-webkit-slider-runnable-track {
+  background: #CCC;
+  transition: background 1s;
+}
+
+.summary_range_slider::-ms-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.summary_range_slider::-ms-fill-lower {
+  background: #2a6495;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+}
+.summary_range_slider::-ms-fill-upper {
+  background: #3071a9;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+}
+.summary_range_slider::-ms-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  border: 0px solid #000000;
+  width: 10px;
+  border-radius: 0px;
+  background: #646464;
+  cursor: pointer;
+  height: 2px;
+  z-index: 20000;
+}
+.summary_range_slider:focus::-ms-fill-lower {
+  background: #A1E7FF;
+}
+.summary_range_slider:focus::-ms-fill-upper {
+  background: #A1E7FF;
+}
+
+.tab1_image{
+	float: left;
+	margin: 15px;
+	margin-top: 0px;
+	margin-left: 0px;
+	width: 100%;
+}
+
+
+/*CSS restyles of certain tags*/
+.summary_h1{
+	font-size: 30px;
+	font-weight: lighter !important;
+	border-bottom: 1px solid #a2a9b1;
+	color: black;
+	
+	line-height: 32px;
+	padding-bottom: 0.17em;
+	padding-top: 0.5em;
+	margin: 0;
+	margin-bottom: 14px;
+	text-transform: none;
+	font-family: "Roboto", sans-serif !important;
+}
+.summary_h2{
+	font-size: 24px;
+	font-weight: lighter !important;
+	border-bottom: 1px solid #a2a9b1;
+	color: black;
+	
+	padding-bottom: 0.17em;
+	padding-top: 0.5em;
+	margin: 0;
+	margin-bottom: 14px;
+	text-transform: none;
+	font-family: "Roboto", sans-serif !important;
+}
+.summary_hr{
+    color: #a2a9b1;
+    background-color: #a2a9b1;
+    border: 0;
+    margin: 0.2em 0;
+}
+
+/*Checkbox*/
+
+.control {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 3px;
+    padding-top: 3px;
+    cursor: pointer;
+	
+	text-align: left;
+	font-family: "Roboto", sans-serif !important;
+	font-weight: lighter !important;
+	font-size: 15.7px; /*Yes 15.7, don't ask*/
+	line-height: 150%;
+	text-transform: none;
+}
+.control input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+.control_indicator {
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    height: 14px;
+    width: 14px;
+    background: #e6e6e6;
+    border: 0px solid #000000;
+}
+.control-radio .control_indicator {
+    border-radius: undefined%;
+}
+
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+    background: #cccccc;
+}
+
+.control input:checked ~ .control_indicator {
+    background: #2aa1c0;
+}
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+    background: #0e6647d;
+}
+.control input:disabled ~ .control_indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.control_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+.control input:checked ~ .control_indicator:after {
+    display: block;
+}
+.control-checkbox .control_indicator:after {
+    left: 5px;
+    top: 1px;
+    width: 3px;
+    height: 8px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.control-checkbox input:disabled ~ .control_indicator:after {
+    border-color: #7b7b7b;
+}
+

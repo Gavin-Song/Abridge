@@ -1,0 +1,11 @@
+Possible future features:
+
+Website specific summaries
+	Youtube - Obtain the transcript and summarize
+	ted-talk - Obtain the transcript and summarize
+	
+Timeline - filter events 
+	Date ranges - Filter by range (Ie dates from 2000-2015)
+	Non-exact dates (Ie 1960s or 1900-2000) - Filter out only these
+
+	
