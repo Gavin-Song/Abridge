@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 
 	"name": "Abridge",
-	"description": "Summerize a webpage",
+	"description": "Summarize any webpage",
 	"version": "1.0.0",
 	
 	"background": {
