@@ -10,7 +10,6 @@ the tabs and misc that are created*/
 /*The class that encompasses the highlighted text in
 the article. Becomes brighter when you hover over it*/
 .extension_highlight{
-	border: 1px solid white;
 	transition: 0.5s;
 }
 .extension_highlight:hover{
