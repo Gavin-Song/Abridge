@@ -15,7 +15,6 @@ the article. Becomes brighter when you hover over it*/
 }
 .extension_highlight:hover{
 	filter: brightness(1.2);
-	border: 1px solid white;
 	transition: 0.5s;
 }
 
